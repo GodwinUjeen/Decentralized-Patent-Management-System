@@ -1,0 +1,18 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Your Profile</mat-card-title>
+    <mat-card-subtitle>My Wallet Address : {{ account }}</mat-card-subtitle>
+    <mat-card-subtitle>My Ether Balance : {{ balance }}</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Your Patent {{ Patents.length }}</mat-card-title>
+    <mat-card-subtitle>The Patents You Own will be displayed</mat-card-subtitle>
+  </mat-card-header>
+  <app-dropdown-list
+    [dataSource]="Patents"
+    [userAccount]="account"
+  ></app-dropdown-list>
+</mat-card>

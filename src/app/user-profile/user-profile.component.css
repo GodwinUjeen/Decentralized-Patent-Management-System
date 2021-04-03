@@ -1,0 +1,7 @@
+.mat-form-field + .mat-form-field {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+.mat-card {
+    border-radius: 0px;
+}
