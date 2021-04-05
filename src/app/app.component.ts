@@ -19,5 +19,15 @@ export class AppComponent {
       icon: 'create',
       path: 'create-patent',
     },
+    {
+      label: 'Shared Patent',
+      icon: 'share',
+      path: 'shared',
+    },
+    {
+      label: 'Transfered Patent',
+      icon: 'transfer',
+      path: 'transfered',
+    },
   ];
 }

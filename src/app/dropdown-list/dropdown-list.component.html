@@ -50,6 +50,7 @@
           mat-button
           matTooltip="Transfer Token"
           [matTooltipPosition]="'above'"
+          *ngIf="listMode === 'default'"
           (click)="openDialog(data.tokenID, 'transfer')"
         >
           Transfer

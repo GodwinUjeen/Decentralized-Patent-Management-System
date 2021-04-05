@@ -1,4 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.snackbar-style {
+  color: #155724 !important;
+  background-color: #d4edda !important;
+  border-color: #c3e6cb !important;
+}
+
+.snackbar-style .mat-simple-snackbar-action {
+  color: #155724 !important;
+  background-color: #d4edda !important;
+  border-color: #c3e6cb !important;
+}
+
+.snackbar-error-style {
+  color: #cc0000 !important;
+  background-color: #ffcccc !important;
+  border-color: #cc0000 !important;
+}
+
+.snackbar-error-style .mat-simple-snackbar-action {
+  color: #cc0000 !important;
+  background-color: #ffcccc !important;
+  border-color: #cc0000 !important;
+}

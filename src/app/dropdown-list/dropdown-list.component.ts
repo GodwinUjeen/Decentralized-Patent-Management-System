@@ -27,11 +27,12 @@ import { TransferPatentService } from '../services/transfer-patent.service';
       ),
     ]),
   ],
-  inputs: ['dataSource', 'userAccount'],
+  inputs: ['dataSource', 'userAccount', 'listMode'],
 })
 export class DropdownListComponent implements OnInit {
   dataSource: PatentInteface[] = [];
   userAccount: string = '';
+  listMode: 'default' | 'shared' | 'transfered' = 'default';
   panelOpenState = false;
   tokenID: string = '';
   toAddress: string = '';
@@ -70,5 +71,4 @@ export class DropdownListComponent implements OnInit {
   ngOnInit(): void {
     this.changeDetectionRef.detectChanges();
   }
-  
 }

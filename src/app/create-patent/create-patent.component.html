@@ -1,18 +1,81 @@
-<div
-  style="
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    border: 1px solid #000;
-  "
->
+<div class="container">
   <mat-card>
-    <mat-form-field appearance="standard">
-      <mat-label>Standard form field</mat-label>
-      <input matInput placeholder="Placeholder" />
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
+    <form [formGroup]="filePatentForm">
+      <mat-card-title> File Your Patent </mat-card-title>
+      <mat-form-field class="example-full-width">
+        <mat-label>Patent Name</mat-label>
+        <input
+          matInput
+          formControlName="name"
+          placeholder="Title of your Patent"
+          [value]="data.name"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Patent Description</mat-label>
+        <textarea
+          matInput
+          placeholder="Provide your patent Abstract"
+          formControlName="description"
+          [matTextareaAutosize]="true"
+          [matAutosizeMinRows]="3"
+          [matAutosizeMaxRows]="10"
+        ></textarea>
+      </mat-form-field>
+    </form>
+    <mat-form-field class="columns">
+      <mat-label *ngIf="selectedFile; else newFile">{{
+        selectedFile.item(0).name
+      }}</mat-label>
+      <ng-template #newFile>
+        <mat-label>Choose file</mat-label>
+      </ng-template>
+      <input matInput disabled />
+      <button
+        mat-icon-button
+        matTooltip="Attach File"
+        [matTooltipPosition]="'above'"
+        matSuffix
+        (click)="fileInput.click()"
+      >
+        <mat-icon>attach_file</mat-icon>
+      </button>
+      <input
+        hidden
+        (change)="selectFile($event)"
+        #fileInput
+        type="file"
+        id="file"
+      />
+      <button
+        *ngIf="!isUploading"
+        mat-icon-button
+        matSuffix
+        matTooltip="Upload"
+        [matTooltipPosition]="'above'"
+        [disabled]="fileSelected"
+        (click)="uploadFile()"
+      >
+        <mat-icon>file_upload</mat-icon>
+      </button>
+      <button
+        *ngIf="isUploading === 'uploading'"
+        mat-icon-button
+        matSuffix
+        disabled
+      >
+        <mat-spinner diameter="15"></mat-spinner>
+      </button>
     </mat-form-field>
+    <mat-card-actions *ngIf="isUploading === 'uploaded'">
+      <button
+        mat-stroked-button
+        (click)="filePatent()"
+        [disabled]="patentFiling"
+      >
+        File Patent
+      </button>
+    </mat-card-actions>
   </mat-card>
 </div>

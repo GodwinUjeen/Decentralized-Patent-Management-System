@@ -4,7 +4,6 @@ import {
   MatSnackBarHorizontalPosition,
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
-import { SnackBarComponent } from '../snack-bar/snack-bar.component';
 @Injectable({
   providedIn: 'root',
 })
@@ -18,15 +17,30 @@ export class SnackBarService {
       duration: 5000,
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
+      panelClass: ['snackbar-style'],
+    });
+    this.snackBar._openedSnackBarRef?.onAction().subscribe(() => {
+      console.log('hi');
+    });
+  }
+  openErrorSnackBar(errorMessage: string, action: string) {
+    this.snackBar.open(errorMessage, action, {
+      duration: 5000,
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
+      panelClass: ['snackbar-error-style'],
     });
   }
 
   openSnackBar(message: string, action: string, data: string) {
-    this.snackBar.openFromComponent(SnackBarComponent, {
+    this.snackBar.open(message, action, {
       duration: 10000,
-      data: data,
       horizontalPosition: this.horizontalPosition,
       verticalPosition: this.verticalPosition,
+      panelClass: ['snackbar-style'],
+    });
+    this.snackBar._openedSnackBarRef?.onAction().subscribe(() => {
+      window.open('https://ropsten.etherscan.io/tx/' + data, '_blank');
     });
   }
 }

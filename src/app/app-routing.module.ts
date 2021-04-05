@@ -21,6 +21,20 @@ const routes: Routes = [
         (m) => m.CreatePatentModule
       ),
   },
+  {
+    path: 'shared',
+    loadChildren: () =>
+      import('./tokens-shared/tokens-shared.module').then(
+        (m) => m.TokensSharedModule
+      ),
+  },
+  {
+    path: 'transfered',
+    loadChildren: () =>
+      import('./tokens-transfered/tokens-transfered.module').then(
+        (m) => m.TokensTransferedModule
+      ),
+  }
 ];
 
 @NgModule({

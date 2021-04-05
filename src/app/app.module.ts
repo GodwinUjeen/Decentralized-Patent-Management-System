@@ -16,8 +16,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SnackBarComponent } from './snack-bar/snack-bar.component';
+
 @NgModule({
-  declarations: [AppComponent, TopBarComponent, DialogOverComponent, SnackBarComponent],
+  declarations: [
+    AppComponent,
+    TopBarComponent,
+    DialogOverComponent,
+    SnackBarComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

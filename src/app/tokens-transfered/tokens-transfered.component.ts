@@ -1,16 +1,18 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import Web3 from 'web3';
+import { EtherscanResponse } from '../models/etherscan-response';
 import { MetamaskService } from '../services/metamask.service';
-import { PatentHoldingService } from '../services/patent-holding.service';
 import { PatentUriService } from '../services/patent-uri.service';
+import { TransferedPatentService } from '../services/transfered-patent.service';
+
 @Component({
-  selector: 'app-user-profile',
-  templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.css'],
-  providers: [MetamaskService, PatentHoldingService, PatentUriService],
+  selector: 'app-tokens-transfered',
+  templateUrl: './tokens-transfered.component.html',
+  styleUrls: ['./tokens-transfered.component.css'],
+  providers: [MetamaskService, TransferedPatentService, PatentUriService],
 })
-export class UserProfileComponent implements OnInit {
-  account: any;
+export class TokensTransferedComponent implements OnInit {
+  account: string = '';
   balance: any;
   Patents: any = [];
   dataIsLoading: boolean = true;
@@ -19,72 +21,65 @@ export class UserProfileComponent implements OnInit {
   constructor(
     private metaMask: MetamaskService,
     private changeDetectionRef: ChangeDetectorRef,
-    private patentHoldingService: PatentHoldingService,
+    private transferedPatentService: TransferedPatentService,
     private patentUriService: PatentUriService
   ) {}
 
   ngOnInit(): void {
     this.metaMask.getAccount().then((val) => {
       this.account = val;
-      this.metaMask.getBalance(val).then((bal) => {
-        this.balance = bal;
-      });
-      this.getHoldingToken();
+      this.getTransferedToken();
       this.changeDetectionRef.detectChanges();
     });
     this.metaMask.accountChange.subscribe((val) => {
       this.changed = true;
       this.account = val;
-      this.metaMask.getBalance(val).then((bal) => {
-        this.balance = bal;
-        this.changeDetectionRef.detectChanges();
-      });
-      this.getHoldingToken();
+      this.getTransferedToken();
       this.changeDetectionRef.detectChanges();
     });
   }
-  getHoldingToken() {
-    this.patentHoldingService
-      .getOwnedPatent(this.account)
+  getTransferedToken() {
+    this.transferedPatentService
+      .getTransferedPatent(this.account)
       .subscribe((resp: { body: any }) => {
-        const allTransaction = resp.body.result;
-        const validList: any = [];
-        let currentList: any = [];
+        const allTransaction: Array<EtherscanResponse> = resp.body.result;
+        const validTransactions: Array<EtherscanResponse> = [];
+        let currentList: Array<EtherscanResponse> = [];
         if (this.changed) {
-          allTransaction.map((val: any) => {
-            if (
-              val.contractAddress === this.contract &&
-              (val.to === this.account || val.from === this.account)
-            ) {
-              currentList.push(val);
-            }
-          });
-        } else {
-          currentList = allTransaction.filter((transaction: any) => {
+          currentList = allTransaction.filter((val: EtherscanResponse) => {
             return (
-              transaction.contractAddress === this.contract &&
-              (Web3.utils.toChecksumAddress(transaction.to) === this.account ||
-                Web3.utils.toChecksumAddress(transaction.from) === this.account)
+              val.contractAddress === this.contract && val.from === this.account
             );
           });
+        } else {
+          currentList = allTransaction.filter(
+            (transaction: EtherscanResponse) => {
+              return (
+                transaction.contractAddress === this.contract &&
+                Web3.utils.toChecksumAddress(transaction.from) === this.account
+              );
+            }
+          );
         }
         const unique = (value: any, index: any, self: any) => {
           return self.indexOf(value) === index;
         };
         const tokens = currentList
-          .map((val: any) => val.tokenID)
+          .map((val: EtherscanResponse) => val.tokenID)
           .filter(unique);
         tokens
           .map((ins: any) =>
-            currentList.map((el: any) => el.tokenID).lastIndexOf(ins)
+            currentList
+              .map((el: EtherscanResponse) => el.tokenID)
+              .lastIndexOf(ins)
           )
           .map((validIndexes: any) =>
-            validList.push(currentList[validIndexes])
+            validTransactions.push(currentList[validIndexes])
           );
-        const tempPatent: any = [];
-        validList.map(async (val: any, index: any) => {
+        const tempPatent: Array<EtherscanResponse> = [];
+        validTransactions.map(async (val: EtherscanResponse, index: number) => {
           if (this.changed) {
-            if (val.to === this.account) {
+            if (val.from === this.account) {
               const uri = await this.patentUriService
                 .getURIData(val.tokenID, this.contract)
                 .then((data: any) => {
@@ -94,7 +89,7 @@ export class UserProfileComponent implements OnInit {
               tempPatent.push(val);
             }
           } else {
-            if (Web3.utils.toChecksumAddress(val.to) === this.account) {
+            if (Web3.utils.toChecksumAddress(val.from) === this.account) {
               const uri = await this.patentUriService
                 .getURIData(val.tokenID, this.contract)
                 .then((data: any) => {
@@ -107,6 +102,7 @@ export class UserProfileComponent implements OnInit {
           this.changeDetectionRef.detectChanges();
         });
         this.Patents = tempPatent;
+        this.changeDetectionRef.detectChanges();
         this.dataIsLoading = false;
       });
   }
