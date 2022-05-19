@@ -1,0 +1,8 @@
+{
+    "/echo": {
+        "target": "https://gateway.ethswarm.org",
+        "secure": true,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}

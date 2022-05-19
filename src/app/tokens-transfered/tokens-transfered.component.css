@@ -4,3 +4,20 @@
   align-items: center;
   justify-content: center;
 }
+
+.mt-2 {
+  margin-top: 16px;
+}
+
+.mat-card {
+  background: transparent !important;
+  color: #ffffff;
+}
+
+.mat-card-subtitle {
+  color: #ffffff;
+}
+
+.mat-card-title {
+  color: #ffffff;
+}

@@ -69,6 +69,56 @@ export class TokensSharedComponent implements OnInit {
             this.patentsSharedTo.push(list);
           }
         });
+        this.patentsSharedFrom = [
+          {
+            contractAddress: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            from: 'Godwin',
+            to: 'Gokul',
+            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenName: 'Ethereum',
+            tokenSymbol: 'ETH',
+            hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
+            uri: {
+              name: 'Akash',
+              description:
+                'A goal-based approach for automated specification of Information Quality policies',
+              documentHash:
+                'a9a0017f54ad2f6b4c412ce3af8870cede5c63c49f4a45906138bed11f918748',
+            },
+          },
+          {
+            contractAddress: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            from: 'Godwin',
+            to: 'Gokul',
+            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenName: 'Ethereum',
+            tokenSymbol: 'ETH',
+            hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
+            uri: {
+              name: 'Yazhini',
+              description:
+                'Applicability of Probablistic Data Structures for Filtering Tasks in Data Loss Prevention Systems',
+              documentHash:
+                'a9a0017f54ad2f6b4c412ce3af8870cede5c63c49f4a45906138bed11f918748',
+            },
+          },
+          {
+            contractAddress: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            from: 'Ajith',
+            to: 'Gokul',
+            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenName: 'Ethereum',
+            tokenSymbol: 'ETH',
+            hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
+            uri: {
+              name: 'Gokul',
+              description:
+                'CaNViS: A cardiac and neurological-based verification system that uses wearable sensors',
+              documentHash:
+                'a9a0017f54ad2f6b4c412ce3af8870cede5c63c49f4a45906138bed11f918748',
+            },
+          },
+        ];
         this.dataIsLoading = false;
       });
   }

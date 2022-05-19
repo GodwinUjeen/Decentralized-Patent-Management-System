@@ -6,6 +6,8 @@ body {
 }
 body {
   margin: 0;
+  background-color: #0d0d0d;
+  /* background-color: white; */
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 .snackbar-style {
@@ -30,4 +32,29 @@ body {
   color: #cc0000 !important;
   background-color: #ffcccc !important;
   border-color: #cc0000 !important;
+}
+
+.object-fit-contain {
+  object-fit: contain !important;
+}
+
+.flex-and-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.sec-text {
+  font-family: "ubuntu";
+  font-style: normal;
+  font-size: 20px;
+  margin: 0px;
+  line-height: 24px;
+  color: #ffffff;
 }

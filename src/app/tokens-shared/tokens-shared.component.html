@@ -1,18 +1,20 @@
 <mat-card>
-  <mat-card-header>
+  <mat-card-header class="mt-2">
     <mat-card-title
-      >Patents Shared To You {{ patentsSharedFrom.length }}</mat-card-title
+      >Patents Shared To You ({{ patentsSharedFrom.length }})</mat-card-title
     >
     <mat-card-subtitle
       >The Patents shared to you will be displayed here</mat-card-subtitle
     >
   </mat-card-header>
-  <div class="loader">
-    <mat-spinner [diameter]="40" *ngIf="dataIsLoading"></mat-spinner>
-  </div>
+</mat-card>
+<div class="loader">
+  <mat-spinner [diameter]="40" *ngIf="dataIsLoading"></mat-spinner>
+</div>
+<div class="mt-3">
   <app-dropdown-list
     [dataSource]="patentsSharedFrom"
     [userAccount]="account"
     [listMode]="'shared'"
   ></app-dropdown-list>
-</mat-card>
+</div>

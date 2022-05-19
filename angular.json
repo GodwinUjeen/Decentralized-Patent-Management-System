@@ -66,7 +66,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "patent-blockchain:build"
+            "browserTarget": "patent-blockchain:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {

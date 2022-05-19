@@ -1,21 +1,43 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-title>Your Profile</mat-card-title>
-    <mat-card-subtitle>My Wallet Address : {{ account }}</mat-card-subtitle>
-    <mat-card-subtitle>My Ether Balance : {{ balance }}</mat-card-subtitle>
-  </mat-card-header>
-</mat-card>
-
+    <mat-card-title>Profile</mat-card-title>
+    <!-- <mat-card-subtitle>Wallet Address : {{ account }}</mat-card-subtitle>
+      <mat-card-subtitle>Ether Balance : {{ balance }}</mat-card-subtitle> -->
+    </mat-card-header>
+    <div class="flex">
+      <div class="rectangle-bg flex-and-center">
+        <div class="eth-logo">
+          <img src="../../assets/eth-diamond-purple.png" height="100%" width="100%" class="object-fit-contain">
+        </div>
+        <div>
+          <div class="flex">
+            <h4 class="purple-text ">
+              Wallet Address
+            </h4>
+            <h4 class="sec-text ">
+              &nbsp;&nbsp;{{ account }}
+            </h4>
+          </div>
+          <div class="flex">
+            <h4 class="purple-text ">
+              Ether Balance
+            </h4>
+            <h4 class="sec-text ">
+              &nbsp;&nbsp;{{ balance }}
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+  
 <mat-card>
   <mat-card-header>
-    <mat-card-title>Your Patent {{ Patents.length }}</mat-card-title>
+    <mat-card-title>Your Patent ({{ Patents.length }})</mat-card-title>
     <mat-card-subtitle>The Patents You Own will be displayed</mat-card-subtitle>
   </mat-card-header>
   <div class="loader">
     <mat-spinner [diameter]="40" *ngIf="dataIsLoading"></mat-spinner>
   </div>
-  <app-dropdown-list
-    [dataSource]="Patents"
-    [userAccount]="account"
-  ></app-dropdown-list>
+  <app-dropdown-list [dataSource]="Patents" [userAccount]="account"></app-dropdown-list>
 </mat-card>

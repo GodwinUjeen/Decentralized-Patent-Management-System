@@ -2,17 +2,22 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  height: 80%;
+  height: 88%;
+  /* background-size: contain; */
+  background-repeat: no-repeat;
+  background-image: url('../../assets/background.png');
 }
 
 mat-card {
-  height: 400px;
-  width: 400px;
+  height: 450px;
+  width: 550px;
   align-items: center;
   flex: 8;
-  display: flex;
   flex-direction: column;
+  background: #252525; 
+  border-radius: 12px;
 }
+
 .example-form {
   min-width: 150px;
   max-width: 500px;
@@ -25,3 +30,62 @@ mat-card {
 .input-field{
   height: 100px;
 }
+
+mat-card-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  padding: 10px;
+}
+
+mat-card-content {
+  color: #4BC9FF !important;
+}
+
+.mat-input-element {
+  caret-color: #4BC9FF !important;
+  border-color: #4BC9FF !important;
+}
+
+form {
+  padding: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.upload-button {
+  border-radius: 5px;
+  background-color: #4BC9FF;
+}
+
+
+.blue-text {
+  font-family: "ubuntu"; 
+  color: #4BC9FF !important;
+}
+
+.hint-text {
+  font-family: "ubuntu"; 
+  color: #89d3f3a1 !important;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;  
+  color: transparent;
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+    color: #4BC9FF!important;
+}
+
+/* input color class */
+::ng-deep input.mat-input-element, textarea.mat-input-element {
+  color: #FFFFFF;
+}
+

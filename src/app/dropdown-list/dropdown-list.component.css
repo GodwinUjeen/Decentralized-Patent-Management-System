@@ -7,5 +7,89 @@
 }
 .example-icon {
   border: none;
-  background-color: #fff;
+  /* background-color: #fff; */
+}
+
+.mat-accordion {  
+  color: #fff;
+  background-color: #0d0d0d !important;
+  background: #0d0d0d !important;  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  
+  justify-content: space-between;
+  padding: 10px;
+  min-width: 50%;
+  max-width: 90%;
+  max-height: 120px;
+}
+
+.mat-expansion-panel {  
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 12px;
+  color: white;
+  min-width: 500px;
+  align-items: baseline;
+}
+
+.mat-expansion-panel-header-title, .mat-expansion-panel-header-description {
+  color: #fff;
+}
+
+.patent-img {
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
+}
+
+.mat-expansion-panel-header, .mat-expanded:focus{
+  background: transparent;
+}
+
+.mat-expansion-panel-header {
+  padding: 10px !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.mat-accordion .mat-expansion-panel:not(.mat-expanded),
+.mat-accordion .mat-expansion-panel:not(.mat-expansion-panel-spacing) {
+   margin-bottom: 10px;
+   border-radius: 12px;
+   height: 100px;
+}
+
+/* Text Styles */
+.white-text {
+  color: #ffffff;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.blue-text {
+  color: #4BC9FF;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.white-text-normal {
+  color: #ffffff;
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.description {
+  max-width: 600px;
 }

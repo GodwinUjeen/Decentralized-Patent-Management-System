@@ -103,6 +103,43 @@ export class TokensTransferedComponent implements OnInit {
         });
         this.Patents = tempPatent;
         this.changeDetectionRef.detectChanges();
+        this.Patents = [
+          {
+            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenName: 'Ethereum',
+            hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
+            uri: {
+              name: 'Suvedha',
+              description: 'Personalized recommendation engine using HADOOP',
+              documentHash:
+                'a9a0017f54ad2f6b4c412ce3af8870cede5c63c49f4a45906138bed11f918748',
+            },
+          },
+          {
+            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenName: 'Ethereum',
+            hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
+            uri: {
+              name: 'Nivedha',
+              description:
+                'Study on predicting for workload of cloud services using Artificial Neural Network',
+              documentHash:
+                'a9a0017f54ad2f6b4c412ce3af8870cede5c63c49f4a45906138bed11f918748',
+            },
+          },
+          {
+            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenName: 'Ethereum',
+            hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
+            uri: {
+              name: 'Rasika',
+              description:
+                'Multi-cloud policy enforcement through semantic modeling and mapping',
+              documentHash:
+                'a9a0017f54ad2f6b4c412ce3af8870cede5c63c49f4a45906138bed11f918748',
+            },
+          },
+        ];
         this.dataIsLoading = false;
       });
   }

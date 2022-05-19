@@ -26,7 +26,7 @@ export class AppComponent {
     },
     {
       label: 'Transfered Patent',
-      icon: 'transfer',
+      icon: 'sync_alt',
       path: 'transfered',
     },
   ];
