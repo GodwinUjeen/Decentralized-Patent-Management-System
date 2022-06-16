@@ -20,7 +20,7 @@
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
-  color: white;
+  color: black;
   line-height: 58px;
 }
 
@@ -55,10 +55,10 @@
   font-size: 20px;
   margin: 0px;
   line-height: 24px;
-  color: #ffffff;
+  color: #000;
 }
 
 .mat-card-subtitle {
-  color: white;
+  color: #000;
   font-family: "ubuntu";
 }

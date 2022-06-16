@@ -74,12 +74,12 @@ export class TokensSharedComponent implements OnInit {
             contractAddress: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
             from: 'Godwin',
             to: 'Gokul',
-            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenID: '0x98ee4780be8f1beae1dcbd21cb787d36fe596366',
             tokenName: 'Ethereum',
             tokenSymbol: 'ETH',
             hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
             uri: {
-              name: 'Akash',
+              name: 'A goal-based approach for automated specification of Information Quality policies',
               description:
                 'A goal-based approach for automated specification of Information Quality policies',
               documentHash:
@@ -90,12 +90,12 @@ export class TokensSharedComponent implements OnInit {
             contractAddress: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
             from: 'Godwin',
             to: 'Gokul',
-            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenID: '0x283af0b28c62c092c9727ytQe09c02ca627eb7f7',
             tokenName: 'Ethereum',
             tokenSymbol: 'ETH',
             hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
             uri: {
-              name: 'Yazhini',
+              name: 'Applicability of Probablistic Data Structures for Filtering Tasks in Data Loss Prevention Systems',
               description:
                 'Applicability of Probablistic Data Structures for Filtering Tasks in Data Loss Prevention Systems',
               documentHash:
@@ -106,12 +106,12 @@ export class TokensSharedComponent implements OnInit {
             contractAddress: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
             from: 'Ajith',
             to: 'Gokul',
-            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenID: '0x283af0b28c62c092c9727f1ee09c02ca627eb7f5',
             tokenName: 'Ethereum',
             tokenSymbol: 'ETH',
             hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
             uri: {
-              name: 'Gokul',
+              name: 'CaNViS: A cardiac and neurological-based verification system that uses wearable sensors',
               description:
                 'CaNViS: A cardiac and neurological-based verification system that uses wearable sensors',
               documentHash:

@@ -11,13 +11,13 @@
 
 .mat-card {
   background: transparent !important;
-  color: #ffffff;
+  color: #000;
 }
 
 .mat-card-subtitle {
-  color: #ffffff;
+  color: #000;
 }
 
 .mat-card-title {
-  color: #ffffff;
+  color: #000;
 }

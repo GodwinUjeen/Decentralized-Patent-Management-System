@@ -112,7 +112,7 @@ export class UserProfileComponent implements OnInit {
           tokenName: 'Ethereum',
           hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
           uri: {
-            name: 'Gokul',
+            name: 'This is a sample trail transaction',
             description: 'This is a sample trail transaction',
             documentHash:
               'a9a0017f54ad2f6b4c412ce3af8870cede5c63c49f4a45906138bed11f918748',
@@ -121,22 +121,22 @@ export class UserProfileComponent implements OnInit {
 
         this.Patents = [
           {
-            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenID: '0x4C9D4a1310639DAbd47B68553eD6Eb366db22C',
             tokenName: 'Ethereum',
             hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
             uri: {
-              name: 'Suvedha',
+              name: 'Personalized recommendation engine using HADOOP',
               description: 'Personalized recommendation engine using HADOOP',
               documentHash:
                 'a9a0017f54ad2f6b4c412ce3af8870cede5c63c49f4a45906138bed11f918748',
             },
           },
           {
-            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenID: '0x18c7b826ef75f4bcba42a6bd9d64168ea9e0eed',
             tokenName: 'Ethereum',
             hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
             uri: {
-              name: 'Nivedha',
+              name: 'Study on predicting for workload of cloud services using Artificial Neural Network',
               description:
                 'Study on predicting for workload of cloud services using Artificial Neural Network',
               documentHash:
@@ -144,11 +144,11 @@ export class UserProfileComponent implements OnInit {
             },
           },
           {
-            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenID: '0xbb9bc244d798123fde783fcc1c72d3bb8c189413',
             tokenName: 'Ethereum',
             hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
             uri: {
-              name: 'Rasika',
+              name: 'Multi-cloud policy enforcement through semantic modeling and mapping',
               description:
                 'Multi-cloud policy enforcement through semantic modeling and mapping',
               documentHash:
@@ -156,11 +156,11 @@ export class UserProfileComponent implements OnInit {
             },
           },
           {
-            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenID: '0x283af0b28c62c092c9727f1ee09c02ca627eb7f5',
             tokenName: 'Ethereum',
             hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
             uri: {
-              name: 'Ajith',
+              name: 'CaNViS: A cardiac and neurological-based verification system that uses wearable sensors',
               description:
                 'CaNViS: A cardiac and neurological-based verification system that uses wearable sensors',
               documentHash:
@@ -168,11 +168,11 @@ export class UserProfileComponent implements OnInit {
             },
           },
           {
-            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenID: '0xe4bed97fc2c89b8282c3787df21757f1f48897ab',
             tokenName: 'Ethereum',
             hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
             uri: {
-              name: 'Godwin',
+              name: 'A comparison of features for automatic deception detection in synchronous computer-mediated communication',
               description:
                 'A comparison of features for automatic deception detection in synchronous computer-mediated communication',
               documentHash:
@@ -180,11 +180,11 @@ export class UserProfileComponent implements OnInit {
             },
           },
           {
-            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenID: '0x283af0b28c62c092c9727ytQe09c02ca627eb7f7',
             tokenName: 'Ethereum',
             hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
             uri: {
-              name: 'Yazhini',
+              name: 'Applicability of Probablistic Data Structures for Filtering Tasks in Data Loss Prevention Systems',
               description:
                 'Applicability of Probablistic Data Structures for Filtering Tasks in Data Loss Prevention Systems',
               documentHash:
@@ -192,11 +192,11 @@ export class UserProfileComponent implements OnInit {
             },
           },
           {
-            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenID: '0x98ee4780be8f1beae1dcbd21cb787d36fe596366',
             tokenName: 'Ethereum',
             hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
             uri: {
-              name: 'Akash',
+              name: 'A goal-based approach for automated specification of Information Quality policies',
               description:
                 'A goal-based approach for automated specification of Information Quality policies',
               documentHash:
@@ -204,11 +204,11 @@ export class UserProfileComponent implements OnInit {
             },
           },
           {
-            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenID: '0x94087cf13f56e07630d2e783c4166fcd6b2001700',
             tokenName: 'Ethereum',
             hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
             uri: {
-              name: 'Opponent',
+              name: 'Implementation of Trust and Reputation Management for Free-Roaming Mobile Agent Security',
               description:
                 'Implementation of Trust and Reputation Management for Free-Roaming Mobile Agent Security',
               documentHash:
@@ -216,6 +216,15 @@ export class UserProfileComponent implements OnInit {
             },
           },
         ];
+
+        const cP = localStorage.getItem('createdPatents');
+        if (cP) {
+          const data = JSON.parse(cP);
+          console.log(data);
+
+          // this.Patents.push(data);
+          this.Patents = [...this.Patents, ...data];
+        }
         this.dataIsLoading = false;
       });
   }

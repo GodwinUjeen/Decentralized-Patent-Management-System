@@ -105,22 +105,22 @@ export class TokensTransferedComponent implements OnInit {
         this.changeDetectionRef.detectChanges();
         this.Patents = [
           {
-            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenID: '0x4C9D4a1310639DAbd47B68553eD6Eb366db22C',
             tokenName: 'Ethereum',
             hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
             uri: {
-              name: 'Suvedha',
+              name: 'Personalized recommendation engine using HADOOP',
               description: 'Personalized recommendation engine using HADOOP',
               documentHash:
                 'a9a0017f54ad2f6b4c412ce3af8870cede5c63c49f4a45906138bed11f918748',
             },
           },
           {
-            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenID: '0x18c7b826ef75f4bcba42a6bd9d64168ea9e0eed',
             tokenName: 'Ethereum',
             hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
             uri: {
-              name: 'Nivedha',
+              name: 'Study on predicting for workload of cloud services using Artificial Neural Network',
               description:
                 'Study on predicting for workload of cloud services using Artificial Neural Network',
               documentHash:
@@ -128,11 +128,11 @@ export class TokensTransferedComponent implements OnInit {
             },
           },
           {
-            tokenID: '0x06012c8cf97BEaD5deAe237070F9587f8E7A266d',
+            tokenID: '0xbb9bc244d798123fde783fcc1c72d3bb8c189413',
             tokenName: 'Ethereum',
             hash: '3c291e2bccff12d1dca4a5ce6428626b84c1a8cf09e173c98949f22e22d3d2e8',
             uri: {
-              name: 'Rasika',
+              name: 'Multi-cloud policy enforcement through semantic modeling and mapping',
               description:
                 'Multi-cloud policy enforcement through semantic modeling and mapping',
               documentHash:

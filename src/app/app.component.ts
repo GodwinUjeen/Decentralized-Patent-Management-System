@@ -20,7 +20,7 @@ export class AppComponent {
       path: 'create-patent',
     },
     {
-      label: 'Shared Patent',
+      label: 'Shared History',
       icon: 'share',
       path: 'shared',
     },

@@ -14,8 +14,8 @@ mat-card {
   align-items: center;
   flex: 8;
   flex-direction: column;
-  background: #252525; 
   border-radius: 12px;
+  background: #e3e3e3 !important;
 }
 
 .example-form {
@@ -35,12 +35,14 @@ mat-card-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
+  color: #000 !important;
   padding: 10px;
 }
 
 mat-card-content {
-  color: #4BC9FF !important;
+  /* color: #4BC9FF !important; */
+  color: black !important;
+  
 }
 
 .mat-input-element {
@@ -66,16 +68,20 @@ form {
 
 .blue-text {
   font-family: "ubuntu"; 
-  color: #4BC9FF !important;
+  /* color: #4BC9FF !important; */
+  color: black !important;
+
 }
 
 .hint-text {
   font-family: "ubuntu"; 
-  color: #89d3f3a1 !important;
+  /* color: #89d3f3a1 !important; */
+  color: #000;
 }
 
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  background-color: #f1f1f1;
   border-radius: 5px;  
   color: transparent;
 }
@@ -86,6 +92,6 @@ form {
 
 /* input color class */
 ::ng-deep input.mat-input-element, textarea.mat-input-element {
-  color: #FFFFFF;
+  color: #000;
 }
 

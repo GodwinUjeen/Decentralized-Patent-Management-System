@@ -4,19 +4,18 @@
   align-items: center;
   justify-content: space-between;
   padding: 5px;
+  color: #000 !important;
 }
 .example-icon {
   border: none;
   /* background-color: #fff; */
 }
 
-.mat-accordion {  
+.mat-accordion {
   color: #fff;
-  background-color: #0d0d0d !important;
-  background: #0d0d0d !important;  
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 10px;
   min-width: 50%;
@@ -24,7 +23,7 @@
   max-height: 120px;
 }
 
-.mat-expansion-panel {  
+.mat-expansion-panel {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 12px;
@@ -33,7 +32,8 @@
   align-items: baseline;
 }
 
-.mat-expansion-panel-header-title, .mat-expansion-panel-header-description {
+.mat-expansion-panel-header-title,
+.mat-expansion-panel-header-description {
   color: #fff;
 }
 
@@ -43,7 +43,8 @@
   margin-right: 20px;
 }
 
-.mat-expansion-panel-header, .mat-expanded:focus{
+.mat-expansion-panel-header,
+.mat-expanded:focus {
   background: transparent;
 }
 
@@ -57,15 +58,15 @@
 
 .mat-accordion .mat-expansion-panel:not(.mat-expanded),
 .mat-accordion .mat-expansion-panel:not(.mat-expansion-panel-spacing) {
-   margin-bottom: 10px;
-   border-radius: 12px;
-   height: 100px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  height: 100px;
 }
 
 /* Text Styles */
 .white-text {
-  color: #ffffff;
-  font-family: 'Ubuntu';
+  color: #000;
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 700;
   margin-bottom: 5px;
@@ -74,8 +75,8 @@
 }
 
 .blue-text {
-  color: #4BC9FF;
-  font-family: 'Ubuntu';
+  color: #4bc9ff;
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -83,8 +84,8 @@
 }
 
 .white-text-normal {
-  color: #ffffff;
-  font-family: 'Ubuntu';
+  color: #000;
+  font-family: "Ubuntu";
   font-style: normal;
   font-size: 20px;
   line-height: 24px;
