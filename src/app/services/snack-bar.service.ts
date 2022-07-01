@@ -19,9 +19,7 @@ export class SnackBarService {
       verticalPosition: this.verticalPosition,
       panelClass: ['snackbar-style'],
     });
-    this.snackBar._openedSnackBarRef?.onAction().subscribe(() => {
-      console.log('hi');
-    });
+    this.snackBar._openedSnackBarRef?.onAction().subscribe(() => {});
   }
   openErrorSnackBar(errorMessage: string, action: string) {
     this.snackBar.open(errorMessage, action, {
