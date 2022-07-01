@@ -1,0 +1,64 @@
+.mat-form-field + .mat-form-field {
+  margin-right: 8px;
+  margin-left: 8px;
+}
+.mat-card {
+  border-radius: 0px;
+  transition: none !important;
+  box-shadow: none !important;
+}
+
+.loader {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.mat-card-title {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  color: black;
+  line-height: 58px;
+}
+
+.rectangle-bg {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.mat-card {
+  background-color: transparent;
+}
+
+.eth-logo {
+  height: 70px;
+  width: 70px;
+}
+
+.purple-text {
+  font-family: "ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0px;
+  line-height: 24px;
+  color: #ca59ff;
+}
+
+.sec-text {
+  font-family: "ubuntu";
+  font-style: normal;
+  font-size: 20px;
+  margin: 0px;
+  line-height: 24px;
+  color: #000;
+}
+
+.mat-card-subtitle {
+  color: #000;
+  font-family: "ubuntu";
+}

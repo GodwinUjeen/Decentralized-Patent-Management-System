@@ -1,0 +1,16 @@
+<app-top-bar></app-top-bar>
+<nav mat-tab-nav-bar>
+  <a class="white-text"
+    mat-tab-link
+    *ngFor="let tabItem of tabs"
+    [routerLink]="tabItem.path"
+    routerLinkActive
+    [routerLinkActiveOptions]="{ exact: true }"
+    #rla="routerLinkActive"
+    [active]="rla.isActive"
+  >
+    <mat-icon class="mr-8">{{ tabItem.icon }}</mat-icon>
+    {{ tabItem.label }}
+  </a>
+</nav>
+<router-outlet></router-outlet>

@@ -1,0 +1,44 @@
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let data of dataSource" (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <div class="patent-img">
+          <img height="100%" width="100%" class="objet-fit-contain" src="../../assets/file-svgrepo-com.svg" />
+        </div>
+        <div>
+          <mat-panel-title  class="white-text-normal description"> {{ data?.uri?.name }} </mat-panel-title>
+          <!-- <mat-panel-title class="white-text description"> {{ data.uri.description }} </mat-panel-title> -->
+          <mat-panel-title class="white-text-normal"><span class="blue-text">Patent Address&nbsp;&nbsp;</span> {{ data.tokenID }}</mat-panel-title>
+        </div>
+      </mat-panel-title>
+      <mat-panel-description>
+        <!-- {{ data.tokenName }} -->
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+
+    <mat-divider></mat-divider>
+    <div class="bottomBar">
+      <a mat-icon-button aria-label="Open File" target="_blank" matTooltip="View on Etherscan"
+        [matTooltipPosition]="'above'" [href]="'https://ropsten.etherscan.io/tx/' + data.hash">
+        <mat-icon>open_in_new</mat-icon>
+      </a>
+      <div>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"
+          matTooltip="Share Patent" [matTooltipPosition]="'above'" (click)="openDialog(data.tokenID, 'share')">
+          <mat-icon>share</mat-icon>
+        </button>
+        <a mat-icon-button aria-label="Open File" target="_blank" *ngIf="data.uri.documentHash"
+          matTooltip="Uploaded Document" [matTooltipPosition]="'above'"
+          [href]="'https://gateway.ethswarm.org/files/' + data.uri.documentHash">
+          <mat-icon>attachment</mat-icon>
+        </a>
+        <button mat-button matTooltip="Transfer Token" [matTooltipPosition]="'above'" *ngIf="listMode === 'default'"
+          (click)="openDialog(data.tokenID, 'transfer')">
+          Transfer
+        </button>
+      </div>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>

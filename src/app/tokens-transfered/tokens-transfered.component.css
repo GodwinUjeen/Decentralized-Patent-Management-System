@@ -1,0 +1,23 @@
+.loader {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.mt-2 {
+  margin-top: 16px;
+}
+
+.mat-card {
+  background: transparent !important;
+  color: #000;
+}
+
+.mat-card-subtitle {
+  color: #000;
+}
+
+.mat-card-title {
+  color: #000;
+}
